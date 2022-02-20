@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mathmatical task</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <!-- font awesome -->
+    <!-- <script
+      src="https://kit.fontawesome.com/b2fe946889.js"
+      crossorigin="anonymous"
+    ></script> -->
+    <!-- Bootstrap Style Sheets -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <!-- css style sheet -->
+    <link rel="stylesheet" href="css/simpleCalculator.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="bg-success">
+      <h1 class="text-center text-light fw-bold py-3">Mathmatical Task</h1>
+      <div class="text-center fw-bold fs-5 py-3">
+        <label class="text-light w-75" for="option"
+          >Select a Project to show</label
+        >
+        <select class="rounded px-1 w-75" name="" id="option">
+          <option value="">Converter</option>
+          <option value="">Calculator</option>
+          <option value="">Clock</option>
+          <option value="">Counter</option>
+          <option value="">Generator</option>
+          <option value="">APPS</option>
+          <option value="">To-do list</option>
+          <option value="">Click to copy</option>
+          <option value="">Modal</option>
+          <option value="">Slider</option>
+        </select>
+      </div>
+    </header>
+    <main>
+      <!-- Converter Section -->
+      <div id="converter">
+        <div class="row">
+          <div class="col-12 col-md-10 mx-auto p-4 rounded border">
+            <h3 class="text-center">length Converter</h3>
+            <div class="row p-3">
+              <div class="col-12 col-md-5">
+                <input class="w-100 text-center fs-3" type="text" />
+                <select class="w-100" name="" id="option">
+                  <option value="">Kilometre</option>
+                  <option value="">Meter</option>
+                  <option value="">Centimeter</option>
+                  <option value="">Milimeter</option>
+                  <option value="">Micrometer</option>
+                  <option value="">Nanometer</option>
+                  <option value="">Mile</option>
+                  <option value="">Foot</option>
+                  <option value="">Inch</option>
+                </select>
+              </div>
+              <div class="col-12 col-md-2 text-center fs-3">To</div>
+              <div class="col-12 col-md-5">
+                <input class="w-100 text-center fs-3" type="text" />
+                <select class="w-100" name="" id="option">
+                  <option value="">Kilometre</option>
+                  <option value="">Meter</option>
+                  <option value="">Centimeter</option>
+                  <option value="">Milimeter</option>
+                  <option value="">Micrometer</option>
+                  <option value="">Nanometer</option>
+                  <option value="">Mile</option>
+                  <option value="">Foot</option>
+                  <option value="">Inch</option>
+                </select>
+              </div>
+              <p class="mt-5">
+                <span class="bg-warning text-light rounded p-1 me-1"
+                  >Formula</span
+                >multiply the length value by 100
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Calculator Section -->
+      <div class="row" id="calculator">
+        <div class="col-12 col-md-10 mx-auto rounded border">
+          <!-- header section -->
+          <div class="mb-5 p-3">
+            <select class="w-100 px-1" name="" id="option">
+              <option value="">Discount Calculator</option>
+              <option value="">Interest Calculator</option>
+              <option value="">Simple Calculator</option>
+              <option value="">BMI Calculator</option>
+              <option value="">TIP Calculator</option>
+              <option value="">Age Calculator</option>
+              <option value="">PMT Calculator</option>
+            </select>
+          </div>
+          <!-- Discount Calculator section -->
+          <div id="discount-calculator">
+            <div class="row">
+              <div class="col-12 col-md-8 p-3 mx-auto shadow-lg rounded">
+                <h3 class="text-center my-2">Discount Calculator</h3>
+                <form action="#">
+                  <div class="mb-4 row">
+                    <label for="d-amount" class="col-sm-5 col-form-label"
+                      >Enter Amount:</label
+                    >
+                    <div class="col-sm-7">
+                      <input type="text" class="form-control" id="d-amount" />
+                    </div>
+                  </div>
+                  <div class="mb-4 row">
+                    <label for="d-rate" class="col-sm-5 col-form-label"
+                      >Enter Discount Rate:</label
+                    >
+                    <div class="col-sm-7">
+                      <input type="text" class="form-control" id="d-rate" />
+                    </div>
+                  </div>
+                  <div class="mb-4 row">
+                    <label for="d-d-amount" class="col-sm-5 col-form-label"
+                      >Discount Amount:</label
+                    >
+                    <div class="col-sm-7">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="d-d-amount"
+                        disabled
+                      />
+                    </div>
+                  </div>
+                  <div class="mb-4 row">
+                    <label for="d-p-amount" class="col-sm-5 col-form-label"
+                      >Final Pay:</label
+                    >
+                    <div class="col-sm-7">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="d-p-amount"
+                        disabled
+                      />
+                    </div>
+                  </div>
+                  <button
+                    id="d-btn"
+                    class="btn btn-primary d-block my-3 w-100"
+                    type="submit"
+                  >
+                    Calculate
+                  </button>
+                  <input
+                    id="d-reset-btn"
+                    type="reset"
+                    value="Reset"
+                    onClick="window.location.reload()"
+                    class="btn btn-info d-block my-3 w-100"
+                  />
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- Intarest Calculator section -->
+          <div id="intarest-calculator">
+            <div class="row">
+              <div class="col-12 col-md-8 p-3 mx-auto shadow-lg rounded">
+                <h3 class="text-center my-2">Intarest Calculator</h3>
+                <form action="#">
+                  <div class="mb-4 row">
+                    <label for="i-amount" class="col-sm-5 col-form-label"
+                      >Enter Amount:</label
+                    >
+                    <div class="col-sm-7">
+                      <input type="text" class="form-control" id="i-amount" />
+                    </div>
+                  </div>
+                  <div class="mb-4 row">
+                    <label for="i-rate" class="col-sm-5 col-form-label"
+                      >Enter Intarest Rate:</label
+                    >
+                    <div class="col-sm-7">
+                      <input type="text" class="form-control" id="i-rate" />
+                    </div>
+                  </div>
+                  <div class="mb-4 row">
+                    <label for="i-time" class="col-sm-5 col-form-label"
+                      >Time in Month:</label
+                    >
+                    <div class="col-sm-7">
+                      <input type="text" class="form-control" id="i-time" />
+                    </div>
+                  </div>
+                  <div class="mb-4 row">
+                    <label for="i-amount" class="col-sm-5 col-form-label"
+                      >Intarest Amount:</label
+                    >
+                    <div class="col-sm-7">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="i-amount"
+                        disabled
+                      />
+                    </div>
+                  </div>
+                  <div class="mb-4 row">
+                    <label for="i-p-amount" class="col-sm-5 col-form-label"
+                      >Final Pay:</label
+                    >
+                    <div class="col-sm-7">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="i-p-amount"
+                        disabled
+                      />
+                    </div>
+                  </div>
+                  <button
+                    id="i-btn"
+                    class="btn btn-primary d-block my-3 w-100"
+                    type="submit"
+                  >
+                    Calculate
+                  </button>
+                  <input
+                    id="i-reset-btn"
+                    type="reset"
+                    value="Reset"
+                    onClick="window.location.reload()"
+                    class="btn btn-info d-block my-3 w-100"
+                  />
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- Simple Calculator section -->
+          <div id="simple-calculator" class="container d-none">
+            <div id="result">
+              <div id="history">
+                <p id="history-value"></p>
+              </div>
+              <div id="output">
+                <p id="output-values"></p>
+              </div>
+            </div>
+            <hr />
+            <div id="key-pad">
+              <button class="operator" id="clear">C</button>
+              <button class="operator" id="backspace">CE</button>
+              <button class="operator" id="%">%</button>
+              <button class="operator" id="/">&#247;</button>
+              <button class="number" id="7">7</button>
+              <button class="number" id="8">8</button>
+              <button class="number" id="9">9</button>
+              <button class="operator" id="*">&times;</button>
+              <button class="number" id="4">4</button>
+              <button class="number" id="5">5</button>
+              <button class="number" id="6">6</button>
+              <button class="operator" id="-">-</button>
+              <button class="number" id="1">1</button>
+              <button class="number" id="2">2</button>
+              <button class="number" id="3">3</button>
+              <button class="operator" id="+">+</button>
+              <button class="number" id="0">0</button>
+              <button class="number" id="00">00</button>
+              <button class="operator" id="=">=</button>
+            </div>
+          </div>
+          <!-- BMI Calculator section -->
+          <div id="bmi-calculator">
+            <div class="row">
+              <div class="col-12 col-md-8 p-3 mx-auto shadow-lg rounded">
+                <h3 class="text-center my-2">BMI Calculator</h3>
+                <form action="#">
+                  <div class="bg-light p-2 rounded">
+                    <div class="mb-4 row">
+                      <label for="weight" class="col-sm-5 col-form-label"
+                        >Weight:</label
+                      >
+                      <div class="col-sm-7">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="weight"
+                          placeholder="Pound"
+                        />
+                      </div>
+                    </div>
+                    <div class="mb-4 row">
+                      <label for="height" class="col-sm-4 col-form-label"
+                        >Height:</label
+                      >
+                      <div class="col-sm-4">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="height-feet"
+                          placeholder="Feet"
+                        />
+                      </div>
+                      <div class="col-sm-4">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="height-inches"
+                          placeholder="Inches"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12 col-md-4 bg-light">
+                      <h4 class="text-center p-3">Your BMI:</h4>
+                    </div>
+                    <div class="col-12 col-md-8 bg-success">
+                      <h4 class="text-center text-light p-3">23.6</h4>
+                    </div>
+                  </div>
+                  <button
+                    id="bmi-btn"
+                    class="btn btn-primary d-block my-3 w-100 fw-bold"
+                    type="submit"
+                  >
+                    Calculate
+                  </button>
+                  <input
+                    id="bmi-reset-btn"
+                    type="reset"
+                    value="Reset"
+                    onClick="window.location.reload()"
+                    class="btn btn-info d-block my-3 w-100 fw-bold"
+                  />
+                  <hr />
+                  <div class="row">
+                    <div class="col-12 col-md-6 col-lg-3 bg-warning">
+                      <p class="text-center text-light fw-bold py-2">
+                        Under weight &#60; 18.5
+                      </p>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 bg-success">
+                      <p class="text-center text-light fw-bold py-2">
+                        Normal weight 18.5 - 25
+                      </p>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 bg-warning">
+                      <p class="text-center text-light fw-bold py-2">
+                        Over weight 25 - 30
+                      </p>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 bg-danger">
+                      <p class="text-center text-light fw-bold py-2">
+                        Obese &#62; 30
+                      </p>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- Tip Calculator section -->
+          <div id="tip-calculator">
+            <div class="row">
+              <div class="col-12 col-md-8 p-3 mx-auto shadow-lg rounded">
+                <h3 class="text-center my-2">Tip Calculator</h3>
+                <form action="#">
+                  <div class="d-flex justify-content-center align-items-center">
+                    <div class="w-100">
+                      <label for="bill-amount">Bill Amount:</label>
+                      <input
+                        type="text"
+                        class="form-control mb-3"
+                        id="bill-amount"
+                        placeholder="0.00"
+                      />
+                      <label for="tips-rate">Tip:</label>
+                      <div class="input-group mb-3">
+                        <button
+                          class="btn btn-outline-secondary bg-light"
+                          type="button"
+                          id="increase-parsen"
+                        >
+                          &#8722;
+                        </button>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="tips-rate"
+                          placeholder="15%"
+                        />
+                        <button
+                          class="btn btn-outline-secondary bg-light"
+                          type="button"
+                          id="decrease-parsen"
+                        >
+                          &#43;
+                        </button>
+                      </div>
+                      <label for="people-number">Number of people</label>
+                      <div class="input-group mb-3">
+                        <button
+                          class="btn btn-outline-secondary bg-light"
+                          type="button"
+                          id="increase-person"
+                        >
+                          &#8722;
+                        </button>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="people-number"
+                          placeholder="2"
+                        />
+                        <button
+                          class="btn btn-outline-secondary bg-light"
+                          type="button"
+                          id="decrease-person"
+                        >
+                          &#43;
+                        </button>
+                      </div>
+                    </div>
+                    <div class="w-100">
+                      <h4 class="text-center">
+                        Tip per Parson <span>$0.00</span>
+                      </h4>
+                      <h4 class="text-center">
+                        Total per Parson <span>$0.00</span>
+                      </h4>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- Age Calculator section -->
+          <div id="age-calculator">
+            <div class="row">
+              <div class="col-12 col-md-8 p-3 mx-auto shadow-lg rounded">
+                <h3 class="text-center my-2 bg-primary text-light p-1">
+                  Age Calculator
+                </h3>
+                <form action="#">
+                  <div class="mb-4 row">
+                    <label for="birth-date" class="col-sm-5 col-form-label"
+                      >Date of Birth:</label
+                    >
+                    <div class="col-sm-7">
+                      <input type="text" class="form-control" id="birth-date" />
+                    </div>
+                  </div>
+                  <div class="mb-4 row">
+                    <label for="todays-date" class="col-sm-5 col-form-label"
+                      >Today`s day:</label
+                    >
+                    <div class="col-sm-7">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="todays-date"
+                      />
+                    </div>
+                  </div>
+                  <table class="w-100 text-center table table-bordered">
+                    <thead>
+                      <th>Years</th>
+                      <th>Months</th>
+                      <th>Days</th>
+                    </thead>
+                    <tbody>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tbody>
+                  </table>
+                  <h3 class="text-center my-2">00 Years 00 Month 00 Dayes</h3>
+                  <button
+                    id="d-btn"
+                    class="btn btn-primary d-block my-3 w-100"
+                    type="submit"
+                  >
+                    Calculate
+                  </button>
+                  <input
+                    id="d-reset-btn"
+                    type="reset"
+                    value="Reset"
+                    onClick="window.location.reload()"
+                    class="btn btn-info d-block my-3 w-100"
+                  />
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- PMT Calculator section -->
+          <div id="pmt-calculator">
+            <div class="row">
+              <div class="col-12 col-md-8 p-3 mx-auto shadow-lg rounded">
+                <h3 class="text-center my-2">PMT Calculator</h3>
+                <form action="#">
+                  <div class="d-flex justify-content-center align-items-center">
+                    <div class="w-100 me-2 border rounded p-2">
+                      <h4 class="text-center my-2">Input</h4>
+                      <div>
+                        <label for="orginal-price">Orginal price:</label>
+                        <input
+                          type="text"
+                          class="form-control mb-3"
+                          id="orginal-price"
+                          placeholder="0.00"
+                        />
+                      </div>
+                      <div>
+                        <label for="downpayment">Downpayment:</label>
+                        <input
+                          type="text"
+                          class="form-control mb-3"
+                          id="downpayment"
+                          placeholder="0.00"
+                        />
+                      </div>
+                      <div>
+                        <label for="loan-trem">Loan trem:</label>
+                        <input
+                          type="text"
+                          class="form-control mb-3"
+                          id="loan-trem"
+                          placeholder="0.00"
+                        />
+                      </div>
+                      <div>
+                        <label for="annual-intrest">Annual Intrest Rate:</label>
+                        <input
+                          type="text"
+                          class="form-control mb-3"
+                          id="annual-intrest"
+                          placeholder="15%"
+                        />
+                      </div>
+                    </div>
+                    <div class="w-100 ms-2 border rounded p-2">
+                      <h4 class="text-center my-2">OutPut</h4>
+                      <div>
+                        <label for="loan-amount">Loan Amount:</label>
+                        <input
+                          type="text"
+                          class="form-control mb-3"
+                          id="loan-amount"
+                          placeholder="0.00"
+                        />
+                      </div>
+                      <div>
+                        <label for="installment">Monthly installment:</label>
+                        <input
+                          type="text"
+                          class="form-control mb-3"
+                          id="installment"
+                          placeholder="0.00"
+                        />
+                      </div>
+                      <div>
+                        <label for="total-payment">Total Payment:</label>
+                        <input
+                          type="text"
+                          class="form-control mb-3"
+                          id="loan-trem"
+                          placeholder="0.00"
+                        />
+                      </div>
+                      <div>
+                        <h5>Payment in word</h5>
+                        <p class="text-danger">
+                          four thousand nine hundred sixty two
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <button
+                    id="pmt-btn"
+                    class="btn btn-primary d-block my-3 w-100"
+                    type="submit"
+                  >
+                    Calculate
+                  </button>
+                  <input
+                    id="pmt-reset-btn"
+                    type="reset"
+                    value="Reset"
+                    onClick="window.location.reload()"
+                    class="btn btn-info d-block my-3 w-100"
+                  />
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Clock Section -->
+      <div class="row" id="clock">
+        <div class="col-12 col-md-10 mx-auto rounded border">
+          <!-- header section -->
+          <div class="mb-5 p-3">
+            <select class="w-100 px-1" name="" id="option">
+              <option value="">Digital Clock</option>
+              <option value="">Analog Clock</option>
+              <option value="">Stopwatch</option>
+              <option value="">Timmer</option>
+            </select>
+          </div>
+          <!-- Digital Clock -->
+          <div id="digital-clock">
+            <div class="row">
+              <div
+                class="col-12 col-md-8 p-3 mx-auto shadow-lg bg-light rounded"
+              >
+                <h3 class="text-center my-2">Digital Clock</h3>
+                <div class="mb-4 row">
+                  <div
+                    class="col-sm-6 bg-dark text-light text-center rounded py-4 px-2 fs-1 border border-5 border-white fw-bold"
+                  >
+                    <h1 class="">
+                      <span>12 :</span>
+                      <span>00 :</span>
+                      <span>00</span>
+                      <span class="text-primary">AM</span>
+                    </h1>
+                    <h4>Sunday, February, 2022</h4>
+                  </div>
+                  <div class="col-sm-6 text-center p-1">
+                    <h4>The Time in English</h4>
+                    <h6>Formal</h6>
+                    <p class="fw-bold text-danger">it is twelve o&#x27 clock</p>
+                    <h6>Less Formal</h6>
+                    <p class="fw-bold text-danger">twelve</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Stopwatch -->
+          <div id="stopwatch">
+            <div class="row">
+              <div
+                class="col-12 col-md-8 p-3 mx-auto shadow-lg bg-light rounded"
+              >
+                <h3 class="text-center my-2">Stopwatch</h3>
+                <div class="mb-4 row">
+                  <div
+                    class="col-sm-6 bg-dark text-light text-center rounded py-4 px-2 fs-1 border border-5 border-white fw-bold"
+                  >
+                    <h1>
+                      <span>00 :</span>
+                      <span>00 :</span>
+                      <span>00</span>
+                    </h1>
+                    </div>
+                  <div class="col-sm-6 text-center p-1">
+                    <h4>The Time in English</h4>
+                    <h6>Less Formal</h6>
+                    <p class="fw-bold text-danger">twelve</p>
+                    <button type="button" class="btn btn-primary">Start</button>
+                    <button type="button" class="btn btn-outline-primary">Reset</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Timmer -->
+          <div id="timmer">
+            <div class="row">
+              <div
+                class="col-12 col-md-8 p-3 mx-auto shadow-lg bg-light rounded"
+              >
+                <h3 class="text-center my-2">Timmer</h3>
+                <div class="mb-4 row">
+                  <div
+                    class="col-sm-6 bg-dark text-light text-center rounded py-4 px-2 fs-1 border border-5 border-white fw-bold"
+                  >
+                    <h1>
+                      <span>00 :</span>
+                      <span>05 :</span>
+                      <span>00</span>
+                    </h1>
+                    </div>
+                  <div class="col-sm-6 text-center p-1">
+                    <h4>The Time in English</h4>
+                    <h6>Less Formal</h6>
+                    <p class="fw-bold text-danger">twelve</p>
+                    <button type="button" class="btn btn-primary">Start</button>
+                    <button type="button" class="btn btn-outline-primary">Reset</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Counter Section -->
+      <div class="row" id="clock">
+        <div class="col-12 col-md-10 mx-auto rounded border">
+          <!-- header section -->
+          <div class="mb-5 p-3">
+            <select class="w-100 px-1" name="" id="option">
+              <option value="">Character Count</option>
+              <option value="">Word Count</option>
+              <option value="">Vowel Count</option>
+              <option value="">Palindrome Checker</option>
+            </select>
+          </div>
+          <!-- Character Count -->
+          <div id="character-count">
+            <div class="row">
+              <div class="col-12 col-md-8 p-3 mx-auto bg-success shadow-lg rounded">
+                <h1 class="text-center text-light">Input Character Count</h1>
+                <hr>
+                <span id="character-count" class="text-light text-center d-block fs-1 fw-bold">0</span>
+                <textarea name="" id="" cols="30" rows="10" class="w-100 p-4 rounded" placeholder="Type Here"></textarea>
+              </div>
+            </div>
+          </div>
+          <!-- Word Count -->
+          <div id="word-count">
+            <div class="row">
+              <div class="col-12 col-md-8 p-3 mx-auto bg-info shadow-lg rounded">
+                <h1 class="text-center text-light">Input Word Count</h1>
+                <hr>
+                <span id="word-count" class="text-light text-center d-block fs-1 fw-bold">0</span>
+                <textarea name="" id="" cols="30" rows="10" class="w-100 p-4 rounded" placeholder="Type Here"></textarea>
+              </div>
+            </div>
+          </div>
+          <!-- Vowel Count -->
+          <div id="vowel-count">
+            <div class="row">
+              <div class="col-12 col-md-8 p-3 mx-auto bg-secondary shadow-lg rounded">
+                <h1 class="text-center text-light">Vowel Count</h1>
+                <hr>
+                <span id="vowel-count" class="text-light text-center d-block fs-1 fw-bold">0</span>
+                <textarea name="" id="" cols="30" rows="10" class="w-100 p-4 rounded" placeholder="Type Here"></textarea>
+              </div>
+            </div>
+          </div>
+          <!-- Palindrome checker -->
+          <div id="palindrome-check">
+            <div class="row">
+              <div class="col-12 col-md-8 p-3 mx-auto shadow-lg rounded">
+                <h1 class="text-center py-4">Palindrome checker</h1>
+                <input type="text" class="w-75 border-0 border-bottom border-5" placeholder="Enter a word..." />
+                <button class="btn btn-primary px-5 fw-bold">Check</button>
+                <p class="text-center fw-bold py-4">Palindrome</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+       <!-- Generator Section -->
+      <div class="row" id="generator">
+        <div class="col-12 col-md-10 mx-auto rounded border">
+          <!-- Header section -->
+          <div class="mb-5 p-3">
+            <select class="w-100 px-1" name="" id="option">
+              <option value="">Password Generate</option>
+              <option value="">Random Number Generate</option>
+              <option value="">Color Generate</option>
+            </select>
+          </div>
+          <!-- Password Generator -->
+          <div id="password-generate">
+            <div class="row">
+              <div class="col-12 col-md-8 p-3 mx-auto bg-success shadow-lg rounded">
+                <h1 class="text-center text-light">Password Generator</h1>
+                <div class="text-center">
+                  <span class="w-75 text-light text-center">Chose the length of your password:</span>
+                <input class="w-25" type="number">
+                </div>
+                <div class="d-flex justify-content-center text-light">
+                  <div class="form-check m-2">
+                    <input class="form-check-input" type="checkbox" value="" id="upper-case">
+                    <label class="form-check-label" for="upper-case">
+                      Upper Case
+                    </label>
+                  </div>
+                  <div class="form-check m-2">
+                    <input class="form-check-input" type="checkbox" value="" id="lower-case" checked>
+                    <label class="form-check-label" for="lower-case">
+                      Lower Case
+                    </label>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-center text-light">
+                  <div class="form-check m-2">
+                    <input class="form-check-input" type="checkbox" value="" id="number">
+                    <label class="form-check-label" for="number">
+                     Number
+                    </label>
+                  </div>
+                  <div class="form-check m-2">
+                    <input class="form-check-input" type="checkbox" value="" id="symbols" checked>
+                    <label class="form-check-label" for="symbols">
+                      Symbols
+                    </label>
+                  </div>
+                </div>
+                <hr>
+                <input type="text" class="w-75 text-center fw-bold fs-3 mx-auto d-block p-3 rounded my-2" placeholder="Nxt256t">
+                <button type="button" class="btn btn-primary mx-auto d-block fw-bold py-2 rounded">Generate</button>
+              </div>
+            </div>
+          </div>
+          <!-- Random Number Generator -->
+          <div id="random-number">
+            <div class="row">
+              <div class="col-12 col-md-8 p-3 mx-auto bg-success shadow-lg rounded">
+                <h1 class="text-center text-light">Random Number Generator</h1>
+                <span id="character-count" class="text-light text-center d-block fs-1 fw-bold">0</span>
+              <hr>
+              <button type="button" class="btn btn-primary mx-auto d-block fw-bold py-2 rounded">Generate</button>
+              </div>
+            </div>
+          </div>
+          <!-- Color Generator -->
+          <div id="random-number">
+            <div class="row">
+              <div class="col-12 col-md-8 p-3 mx-auto bg-success shadow-lg rounded">
+                <h1 class="text-center text-light">Hexa Color Generator</h1>
+                <span id="character-count" class="text-light text-center d-block fs-1 fw-bold">#ba359d</span>
+              <hr>
+              <button type="button" class="btn btn-primary mx-auto d-block fw-bold py-2 rounded">Generate</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+       <!-- App Section -->
+      <div class="row" id="app">
+        <div class="col-12 col-md-10 mx-auto rounded border">
+          <!-- Header section -->
+          <div class="mb-5 p-3">
+            <select class="w-100 px-1" name="" id="option">
+              <option value="">Quiz APP</option>
+              <option value="">Weather APP</option>
+              <option value="">Counter app</option>
+              <option value="">Notes App</option>
+            </select>
+          </div>
+          <!-- Quiz APP -->
+          <div id="quiz-app">
+            <div class="row">
+              <div class="col-12 col-md-8 p-3 mx-auto shadow-lg rounded">
+              <h1 class="text-center">Quiz APP</h1>
+              <hr>
+              <h6 class="my-5 text-center">How will you add 25 as the first element of the array? const numbers = [45, 12, 36, 84]</h6>
+             <div class="p-2 my-4 bg-light rounded text-center w-75 mx-auto">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="one">
+                <label class="form-check-label" for="one">
+                  Default radio
+                </label>
+              </div>
+             </div>
+             <div class="p-2 my-4 bg-light rounded text-center w-75 mx-auto">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="two" checked>
+                <label class="form-check-label" for="two">
+                  Default checked radio
+                </label>
+              </div>
+             </div>
+              <div class="p-2 my-4 bg-light rounded text-center w-75 mx-auto">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="three" checked>
+                  <label class="form-check-label" for="three">
+                    Default checked radio
+                  </label>
+                </div>
+              </div>
+              <div class="p-2 my-4 bg-light rounded text-center w-75 mx-auto">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="four" checked>
+                  <label class="form-check-label" for="four">
+                    Default checked radio
+                  </label>
+                </div>
+              </div>
+              <div class="text-center">
+                <button type="button" class="btn btn-outline-danger px-5 fw-bold py-2 rounded-pill">Prev</button>
+                <button type="button" class="btn bg-danger text-light fw-bold px-5 py-2 rounded-pill">Next</button>
+              </div>
+              </div>
+            </div>
+          </div>
+           <!-- Weather APP -->
+          <div id="weather-app">
+            <div class="row">
+              <div class="col-12 col-md-8 p-3 mx-auto shadow-lg rounded">
+                <h1 class="text-center py-4">Weather APP</h1>
+                <input type="text" class="w-75 border-0 border-bottom border-5" placeholder="Search for a city"/>
+                <button class="btn btn-primary px-5 fw-bold">Check</button>
+                <div class="w-75 mx-auto shadow-lg bg-light rounded my-4 p-3 text-center">
+                  <h3>Paris</h3>
+                  <h1 class="fs-1 my-4">9<sup class="fs5">0</sup> C</h1>
+                  <img class="img-fluid" src="images/images.png" alt="">
+                  <h5 class="fw-bold my-3">Light Intensity Drizzle</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+           <!-- Counter APP -->
+          <div id="counter-app">
+            <div class="row">
+              <div class="col-12 col-md-8 p-3 mx-auto bg-info shadow-lg rounded">
+                <h1 class="text-center text-light py-4">Counter App</h1>
+                <span class="text-light text-center d-block fs-1 fw-bold">0</span>
+                <hr />
+                <div class="buttons text-center">
+                  <button id="substract" class="py-2 px-4 rounded">
+                    <i class="fas fa-arrow-down substract"></i>
+                      Substract
+                  </button>
+                  <button id="reset" class="py-2 px-4 rounded">
+                    <i class="fas fa-spinner reset"></i>
+                      Reset
+                  </button>
+                  <button id="add" class="py-2 px-4 rounded">
+                    <i class="fas fa-arrow-up add"></i>
+                      Add
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
