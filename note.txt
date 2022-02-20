@@ -15,6 +15,7 @@
     # BMI Calculator
     # TIP Calculator
     # Age Calculator
+    # GPA Calculator
 3. Clock
     # Digital Clock
     # Analog Clock
@@ -34,7 +35,35 @@
     # Weather APP
     # Counter app
     # Notes App
-7. To-do list
-8. Click to copy
-9. Modal
-10 Slider
+    # Bookmark app
+    # Crud App
+    # Math App
+    # Painting App
+    # Product store App
+    # To Do App
+7. Web component
+    # Card Payment UI
+    # Custom Alert
+    # Custom Confirm Box
+    # Custom Range Slider
+    # Dark Light Mode
+    # Filterable Gallery
+    # Foalting Action Button
+    # Form Validation
+    # Image Gallery Thumbnail
+    # Image Slider
+    # Modal
+    # Modal with Progress Bookmark
+    # Movie App
+    # Multi-Step Form
+    # Music Player App
+    # Page Animation
+    # Smoth Scrolling
+    # Pricing Table
+    # Product Filter
+    # Product Slider
+    # Responsive Movile Menu
+    # Scroll To Top
+    # Vertical Tabs
+    # Type Writing Effect
+    # Click to copy
