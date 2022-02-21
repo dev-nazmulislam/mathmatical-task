@@ -27,9 +27,9 @@
     # Vowel Count
     # Palindrome Checker
 5. Generator
-    # Password Generate
-    # Random Number Generate
-    # Color Generate
+    # Password Generator
+    # Random Number Generator
+    # Color Generator
 6. APPS
     # Quiz APP
     # Weather APP

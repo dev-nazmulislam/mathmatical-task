@@ -1,4 +1,4 @@
-// actual  conversion code starts here
+/* // actual  conversion code starts here
 
 var ones = [
   "",
@@ -85,3 +85,137 @@ function convert(num) {
 // for (let i = 0; i <= 10; i++) {
 //   console.log(convert(i));
 // }
+ */
+// Projects option
+
+const projectsShow = [
+  "converter",
+  "calculator",
+  "clock",
+  "counter",
+  "generator",
+  "app",
+  "web-component",
+];
+const calculatorShow = [
+  "discount-calculator",
+  "intarest-calculator",
+  "simple-calculator",
+  "bmi-calculator",
+  "tip-calculator",
+  "age-calculator",
+  "pmt-calculator",
+];
+const clockShow = ["digital-clock", "analog-clock", "stopwatch", "timmer"];
+const counterShow = [
+  "character-count",
+  "word-count",
+  "vowel-count",
+  "palindrome-check",
+];
+const generotorShow = ["password-generate", "random-number", "color-number"];
+const appShow = [
+  "quiz-app",
+  "weather-app",
+  "counter-app",
+  "notes-app",
+  "bookmark-app",
+  "curd-app",
+  "math-app",
+  "paint-app",
+  "store-app",
+  "to-do-app",
+  "to-do-list-ap",
+];
+
+const webShow = [
+  "card-payment",
+  "custom-alert",
+  "custom-confirm",
+  "range-slider",
+  "dark-light",
+  "filterable-gallery",
+  "action-button",
+  "form-validation",
+  "torm-validation",
+  "image-slider",
+  "modal",
+  "progress-bookmark",
+  "movie-app",
+  "multi-Step",
+  "music-player",
+  "pageAnimation",
+  "smoth-scrolling",
+  "pricing-table",
+  "product-filter",
+  "product-slider",
+  "responsive-menu",
+  "scroll-top",
+  "vertical-tabs",
+  "writing-effect",
+  "click-to-copy",
+];
+for (let i = 1; i < projectsShow.length; i++) {
+  document.getElementById(projectsShow[i]).classList.add("d-none");
+}
+for (let i = 1; i < calculatorShow.length; i++) {
+  document.getElementById(calculatorShow[i]).classList.add("d-none");
+}
+for (let i = 1; i < clockShow.length; i++) {
+  document.getElementById(clockShow[i]).classList.add("d-none");
+}
+for (let i = 1; i < counterShow.length; i++) {
+  document.getElementById(counterShow[i]).classList.add("d-none");
+}
+for (let i = 1; i < generotorShow.length; i++) {
+  document.getElementById(generotorShow[i]).classList.add("d-none");
+}
+for (let i = 1; i < appShow.length; i++) {
+  document.getElementById(appShow[i]).classList.add("d-none");
+}
+for (let i = 1; i < webShow.length; i++) {
+  document.getElementById(webShow[i]).classList.add("d-none");
+}
+
+function handleSelectChange(e) {
+  for (let i = 0; i < projectsShow.length; i++) {
+    document.getElementById(projectsShow[i]).classList.add("d-none");
+  }
+  document.getElementById(e.target.value).classList.remove("d-none");
+}
+function handleCalculatorChange(e) {
+  for (let i = 0; i < calculatorShow.length; i++) {
+    document.getElementById(calculatorShow[i]).classList.add("d-none");
+  }
+  document.getElementById(e.target.value).classList.remove("d-none");
+}
+function handleClockShow(e) {
+  for (let i = 0; i < clockShow.length; i++) {
+    document.getElementById(clockShow[i]).classList.add("d-none");
+  }
+  document.getElementById(e.target.value).classList.remove("d-none");
+}
+function handleCounterShow(e) {
+  for (let i = 0; i < counterShow.length; i++) {
+    document.getElementById(counterShow[i]).classList.add("d-none");
+  }
+  document.getElementById(e.target.value).classList.remove("d-none");
+}
+function handleGenerotorShow(e) {
+  for (let i = 0; i < generotorShow.length; i++) {
+    document.getElementById(generotorShow[i]).classList.add("d-none");
+  }
+  document.getElementById(e.target.value).classList.remove("d-none");
+}
+function handleAppShow(e) {
+  for (let i = 0; i < appShow.length; i++) {
+    document.getElementById(appShow[i]).classList.add("d-none");
+  }
+  document.getElementById(e.target.value).classList.remove("d-none");
+}
+function handleweb(e) {
+  for (let i = 0; i < webShow.length; i++) {
+    document.getElementById(webShow[i]).classList.add("d-none");
+  }
+  document.getElementById(e.target.value).classList.remove("d-none");
+}

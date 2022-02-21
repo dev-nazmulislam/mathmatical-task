@@ -29,20 +29,20 @@
         <label class="text-light w-75" for="option"
           >Select a Project to show</label
         >
-        <select class="rounded px-1 w-75" name="" id="option">
-          <option value="">Converter</option>
-          <option value="">Calculator</option>
-          <option value="">Clock</option>
-          <option value="">Counter</option>
-          <option value="">Generator</option>
-          <option value="">APPS</option>
-          <option value="">Web component</option>
+        <select onchange="handleSelectChange(event)" class="rounded px-1 w-75" name="" id="option">
+          <option value="converter">Converter</option>
+          <option value="calculator">Calculator</option>
+          <option value="clock">Clock</option>
+          <option value="counter">Counter</option>
+          <option value="generator">Generator</option>
+          <option value="app">APPS</option>
+          <option value="web-component">Web component</option>
         </select>
       </div>
     </header>
     <main>
       <!-- Converter Section -->
-      <div id="converter">
+      <div id="converter" class="">
         <div class="row">
           <div class="col-12 col-md-10 mx-auto p-4 rounded border">
             <h3 class="text-center">length Converter</h3>
@@ -91,14 +91,15 @@
         <div class="col-12 col-md-10 mx-auto rounded border">
           <!-- header section -->
           <div class="mb-5 p-3">
-            <select class="w-100 px-1" name="" id="option">
-              <option value="">Discount Calculator</option>
-              <option value="">Interest Calculator</option>
-              <option value="">Simple Calculator</option>
-              <option value="">BMI Calculator</option>
-              <option value="">TIP Calculator</option>
-              <option value="">Age Calculator</option>
-              <option value="">PMT Calculator</option>
+            <select onchange="handleCalculatorChange(event)" class="w-100 px-1" name="" id="option">
+              <option value="discount-calculator">Discount Calculator</option>
+              <option value="intarest-calculator">Interest Calculator</option>
+              <option value="simple-calculator">Simple Calculator</option>
+              <option value="bmi-calculator">BMI Calculator</option>
+              <option value="tip-calculator">TIP Calculator</option>
+              <option value="age-calculator">Age Calculator</option>
+              <option value="pmt-calculator">PMT Calculator</option>
+              <option value="gpa-calculator">GPA Calculator</option>
             </select>
           </div>
           <!-- Discount Calculator section -->
@@ -242,7 +243,7 @@
             </div>
           </div>
           <!-- Simple Calculator section -->
-          <div id="simple-calculator" class="container d-none">
+          <div id="simple-calculator" class="container">
             <div id="result">
               <div id="history">
                 <p id="history-value"></p>
@@ -616,11 +617,11 @@
         <div class="col-12 col-md-10 mx-auto rounded border">
           <!-- header section -->
           <div class="mb-5 p-3">
-            <select class="w-100 px-1" name="" id="option">
-              <option value="">Digital Clock</option>
-              <option value="">Analog Clock</option>
-              <option value="">Stopwatch</option>
-              <option value="">Timmer</option>
+            <select onchange="handleClockShow(event)" class="w-100 px-1" name="" id="option">
+              <option value="digital-clock">Digital Clock</option>
+              <option value="analog-clock">Analog Clock</option>
+              <option value="stopwatch">Stopwatch</option>
+              <option value="timmer">Timmer</option>
             </select>
           </div>
           <!-- Digital Clock -->
@@ -723,15 +724,15 @@
         </div>
       </div>
       <!-- Counter Section -->
-      <div class="row" id="clock">
+      <div class="row" id="counter">
         <div class="col-12 col-md-10 mx-auto rounded border">
           <!-- header section -->
           <div class="mb-5 p-3">
-            <select class="w-100 px-1" name="" id="option">
-              <option value="">Character Count</option>
-              <option value="">Word Count</option>
-              <option value="">Vowel Count</option>
-              <option value="">Palindrome Checker</option>
+            <select onchange="handleCounterShow(event)" class="w-100 px-1" name="" id="option">
+              <option value="character-count">Character Count</option>
+              <option value="word-count">Word Count</option>
+              <option value="vowel-count">Vowel Count</option>
+              <option value="palindrome-check">Palindrome Checker</option>
             </select>
           </div>
           <!-- Character Count -->
@@ -785,10 +786,10 @@
         <div class="col-12 col-md-10 mx-auto rounded border">
           <!-- Header section -->
           <div class="mb-5 p-3">
-            <select class="w-100 px-1" name="" id="option">
-              <option value="">Password Generate</option>
-              <option value="">Random Number Generate</option>
-              <option value="">Color Generate</option>
+            <select onchange="handleGenerotorShow(event)" class="w-100 px-1" name="" id="option">
+              <option value="password-generate">Password Generate</option>
+              <option value="random-number">Random Number Generate</option>
+              <option value="color-number">Color Generate</option>
             </select>
           </div>
           <!-- Password Generator -->
@@ -846,7 +847,7 @@
             </div>
           </div>
           <!-- Color Generator -->
-          <div id="random-number">
+          <div id="color-number">
             <div class="row">
               <div class="col-12 col-md-8 p-3 mx-auto bg-success shadow-lg rounded">
                 <h1 class="text-center text-light">Hexa Color Generator</h1>
@@ -863,18 +864,18 @@
         <div class="col-12 col-md-10 mx-auto rounded border">
           <!-- Header section -->
           <div class="mb-5 p-3">
-            <select class="w-100 px-1" name="" id="option">
-              <option value="">Quiz APP</option>
-              <option value="">Weather APP</option>
-              <option value="">Counter app</option>
-              <option value="">Notes App</option>
-              <option value="">Bookmark App</option>
-              <option value="">Curd App</option>
-              <option value="">Math App</option>
-              <option value="">Painting App</option>
-              <option value="">Product store App</option>
-              <option value="">To Do App</option>
-              <option value="">To Do Listing App</option>
+            <select onchange="handleAppShow(event)" class="w-100 px-1" name="" id="option">
+              <option value="quiz-app">Quiz APP</option>
+              <option value="weather-app">Weather APP</option>
+              <option value="counter-app">Counter app</option>
+              <option value="notes-app">Notes App</option>
+              <option value="bookmark-app">Bookmark App</option>
+              <option value="curd-app">Curd App</option>
+              <option value="math-app">Math App</option>
+              <option value="paint-app">Painting App</option>
+              <option value="store-app">Product store App</option>
+              <option value="to-do-app">To Do App</option>
+              <option value="to-do-list-app">To Do Listing App</option>
             </select>
           </div>
           <!-- Quiz APP -->
@@ -1042,37 +1043,46 @@
         <div class="col-12 col-md-10 mx-auto rounded border">
           <!-- Header section -->
           <div class="mb-5 p-3">
-            <select class="w-100 px-1" name="" id="option">
-              <option value="">Card Payment UI</option>
-              <option value="">Custom Alert</option>
-              <option value="">Custom Confirm Box</option>
-              <option value="">Custom Range Slider</option>
-              <option value="">Dark Light Mode</option>
-              <option value="">Filterable Gallery</option>
-              <option value="">Foalting Action Button</option>
-              <option value="">Form Validation</option>
-              <option value="">Image Gallery Thumbnail</option>
-              <option value="">Image Slider</option>
-              <option value="">Modal</option>
-              <option value="">Modal with Progress Bookmark</option>
-              <option value="">Movie App</option>
-              <option value="">Multi-Step Form</option>
-              <option value="">Music Player App</option>
-              <option value="">Page Animation</option>
-              <option value="">Smoth Scrolling</option>
-              <option value="">Pricing Table</option>
-              <option value="">Product Filter</option>
-              <option value="">Product Slider</option>
-              <option value="">Responsive Movile Menu</option>
-              <option value="">Scroll To Top</option>
-              <option value="">Vertical Tabs</option>
-              <option value="">Type Writing Effect</option>
-              <option value="">Click to copy</option>
+            <select onchange="handleweb(event)" class="w-100 px-1" name="" id="option">
+              <option value="card-payment">Card Payment UI</option>
+              <option value="custom-alert">Custom Alert</option>
+              <option value="custom-confirm">Custom Confirm Box</option>
+              <option value="range-slider">Custom Range Slider</option>
+              <option value="dark-light">Dark Light Mode</option>
+              <option value="filterable-gallery">Filterable Gallery</option>
+              <option value="action-button">Foalting Action Button</option>
+              <option value="form-validation">Form Validation</option>
+              <option value="torm-validation">Image Gallery Thumbnail</option>
+              <option value="image-slider">Image Slider</option>
+              <option value="modal">Modal</option>
+              <option value="progress-bookmark">Modal with Progress Bookmark</option>
+              <option value="movie-app">Movie App</option>
+              <option value="multi-Step">Multi-Step Form</option>
+              <option value="music-player">Music Player App</option>
+              <option value="pageAnimation">Page Animation</option>
+              <option value="smoth-scrolling">Smoth Scrolling</option>
+              <option value="pricing-table">Pricing Table</option>
+              <option value="product-filter">Product Filter</option>
+              <option value="product-slider">Product Slider</option>
+              <option value="responsive-menu">Responsive Movile Menu</option>
+              <option value="scroll-top">Scroll To Top</option>
+              <option value="vertical-tabs">Vertical Tabs</option>
+              <option value="writing-effect">Type Writing Effect</option>
+              <option value="click-to-copy">Click to copy</option>
             </select>
+          </div>
+           <!-- Card Payment UI -->
+           <div id="card-payment">
+            <div class="row">
+              <div class="col-12 col-md-8 p-3 mx-auto shadow-lg rounded">
+                <h1 class="text-center py-4">Card Payment UI</h1>
+                <span class="text-danger text-center d-block">comming soon</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </main>
+      </main>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
