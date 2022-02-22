@@ -1,13 +1,18 @@
 1. Converter
-    # Kilometre
-    # Meter
-    # Centimeter
-    # Milimeter
-    # Micrometer
-    # Nanometer
-    # Mile
-    # Foot 
-    # Inch
+    # Kilometre 0
+    # Meter 1
+    # Centimeter 2
+    # Milimeter 3
+    # Micrometer 4
+    # Nanometer 5
+    # Mile 6
+    # Foot  7
+    # Inch 8
+    ##0  Kilometre * Kilometre
+    ##1 Kilometre * Meter
+    ##2 Kilometre * Centimeter
+    ##3 Kilometre * Milimeter
+    ##4 
 2. Calculator
     # Discount Calculator
     # Interest Calculator

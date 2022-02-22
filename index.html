@@ -42,38 +42,34 @@
     </header>
     <main>
       <!-- Converter Section -->
-      <div id="converter" class="">
+      <div id="converter" onchange="handleevent(event)"  class="">
         <div class="row">
           <div class="col-12 col-md-10 mx-auto p-4 rounded border">
             <h3 class="text-center">length Converter</h3>
             <div class="row p-3">
               <div class="col-12 col-md-5">
-                <input class="w-100 text-center fs-3" type="text" />
-                <select class="w-100" name="" id="option">
-                  <option value="">Kilometre</option>
-                  <option value="">Meter</option>
-                  <option value="">Centimeter</option>
-                  <option value="">Milimeter</option>
-                  <option value="">Micrometer</option>
-                  <option value="">Nanometer</option>
-                  <option value="">Mile</option>
-                  <option value="">Foot</option>
-                  <option value="">Inch</option>
+                <input id="left" class="w-100 text-center fs-3" type="text" />
+                <select class="w-100" name="" id="converter-left">
+                  <option value="kilometre">Kilometre</option>
+                  <option value="meter">Meter</option>
+                  <option value="centimeter">Centimeter</option>
+                  <option value="milimeter">Milimeter</option>
+                  <option value="mile">Mile</option>
+                  <option value="feet">Feet</option>
+                  <option value="inch">Inch</option>
                 </select>
               </div>
               <div class="col-12 col-md-2 text-center fs-3">To</div>
               <div class="col-12 col-md-5">
-                <input class="w-100 text-center fs-3" type="text" />
-                <select class="w-100" name="" id="option">
-                  <option value="">Kilometre</option>
-                  <option value="">Meter</option>
-                  <option value="">Centimeter</option>
-                  <option value="">Milimeter</option>
-                  <option value="">Micrometer</option>
-                  <option value="">Nanometer</option>
-                  <option value="">Mile</option>
-                  <option value="">Foot</option>
-                  <option value="">Inch</option>
+                <input id="right" class="w-100 text-center fs-3" type="text" />
+                <select class="w-100" name="" id="converter-right">
+                  <option value="kilometre">Kilometre</option>
+                  <option value="meter">Meter</option>
+                  <option value="centimeter">Centimeter</option>
+                  <option value="milimeter">Milimeter</option>
+                  <option value="mile">Mile</option>
+                  <option value="feet">Feet</option>
+                  <option value="inch">Inch</option>
                 </select>
               </div>
               <p class="mt-5">
@@ -1089,5 +1085,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="js/script.js"></script>
+    <script src="js/length.js"></script>
   </body>
 </html>
