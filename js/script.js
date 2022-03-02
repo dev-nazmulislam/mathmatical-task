@@ -105,6 +105,7 @@ const calculatorShow = [
   "tip-calculator",
   "age-calculator",
   "pmt-calculator",
+  "gpa-calculator",
 ];
 const clockShow = ["digital-clock", "analog-clock", "stopwatch", "timmer"];
 const counterShow = [
@@ -125,7 +126,7 @@ const appShow = [
   "paint-app",
   "store-app",
   "to-do-app",
-  "to-do-list-ap",
+  "to-do-list-app",
 ];
 
 const webShow = [
@@ -137,14 +138,14 @@ const webShow = [
   "filterable-gallery",
   "action-button",
   "form-validation",
-  "torm-validation",
-  "image-slider",
+  "img-gallery",
+  "img-slider",
   "modal",
   "progress-bookmark",
   "movie-app",
   "multi-Step",
   "music-player",
-  "pageAnimation",
+  "page-animation",
   "smoth-scrolling",
   "pricing-table",
   "product-filter",
@@ -155,6 +156,7 @@ const webShow = [
   "writing-effect",
   "click-to-copy",
 ];
+
 for (let i = 1; i < projectsShow.length; i++) {
   document.getElementById(projectsShow[i]).classList.add("d-none");
 }

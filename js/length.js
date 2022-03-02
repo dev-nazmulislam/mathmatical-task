@@ -1,15 +1,39 @@
 function handleevent(e) {
+  // get Value
   const leftIndex = document.getElementById("converter-left").selectedIndex;
   const rightINdex = document.getElementById("converter-right").selectedIndex;
-  const leftValue = document.getElementById("left").value;
-  const rightValue = document.getElementById("right").value;
+  const leftValue = getValuelength("left");
+  const rightValue = getValuelength("right");
   const checkValue = e.target.id;
-  console.log(leftIndex + "" + rightINdex);
+  const onChangeValue = e.target.selectedIndex;
+  // Calculate Value
   if (checkValue == "left") {
+    if (leftValue == "error") {
+      document.getElementById("right").value = "Incorect Value";
+    } else {
+      const value = updateValue[leftIndex + "" + rightINdex](leftValue);
+      document.getElementById("right").value = value;
+    }
+  } else if (checkValue == "right") {
+    if (rightValue == "error") {
+      document.getElementById("left").value = "Incorect Value";
+    } else {
+      const value = updateValue[rightINdex + "" + leftIndex](rightValue);
+      document.getElementById("left").value = value;
+    }
+  } else if (onChangeValue != -1) {
     const value = updateValue[leftIndex + "" + rightINdex](leftValue);
     document.getElementById("right").value = value;
   }
 }
+const getValuelength = (id) => {
+  const value = document.getElementById(id).value;
+  if (!isNaN(value)) {
+    return parseFloat(value);
+  } else {
+    return "error";
+  }
+};
 const updateValue = {
   // Converte Kilometre to others
   "00": (value) => value, // Kilometre to Kilometre
@@ -51,4 +75,20 @@ const updateValue = {
   44: (value) => value / 1609344, // Mile to Mile
   45: (value) => value * 5280, // Mile to Feet
   46: (value) => value * 63360, // Mile to Inch
+  // Converte Feet to others
+  50: (value) => value / 3281, // Feet to Kilometre
+  51: (value) => value / 3.281, // Feet to Meter
+  52: (value) => value * 30.48, // Feet to Centimeter
+  53: (value) => value * 305, // Feet to Milimeter
+  54: (value) => value / 5280, // Feet to Mile
+  55: (value) => value, // Feet to Feet
+  56: (value) => value * 12, // Feet to Inch
+  // Converte Inch to others
+  60: (value) => value / 39370, // Inch to Kilometre
+  61: (value) => value / 39.37, // Inch to Meter
+  62: (value) => value * 2.54, // Inch to Centimeter
+  63: (value) => value * 25.4, // Inch to Milimeter
+  64: (value) => value / 63360, // Inch to Mile
+  65: (value) => value / 12, // Inch to Feet
+  66: (value) => value, // Inch to Inch
 };
