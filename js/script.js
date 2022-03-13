@@ -130,6 +130,7 @@ const appShow = [
 ];
 
 const webShow = [
+  "acc-container",
   "card-payment",
   "custom-alert",
   "custom-confirm",

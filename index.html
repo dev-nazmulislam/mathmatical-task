@@ -21,6 +21,7 @@
     <!-- css style sheet -->
     <link rel="stylesheet" href="css/simpleCalculator.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/accordion.css">
   </head>
   <body>
     <header class="bg-success">
@@ -1039,6 +1040,7 @@
           <!-- Header section -->
           <div class="mb-5 p-3">
             <select onchange="handleweb(event)" class="w-100 px-1" name="" id="option">
+              <option value="acc-container">Accordion</option>
               <option value="card-payment">Card Payment UI</option>
               <option value="custom-alert">Custom Alert</option>
               <option value="custom-confirm">Custom Confirm Box</option>
@@ -1066,7 +1068,123 @@
               <option value="click-to-copy">Click to copy</option>
             </select>
           </div>
-           <!-- Card Payment UI -->
+           <!-- Accordion -->
+           <section id="acc-container" class="acc-container">
+            <h1>Accordion Without any framework</h1>
+            <div class="accordion">
+              <p>How does javaScript work?</p>
+            </div>
+            <div class="discreaption">
+              <p>
+                JavaScript is a client side scripting language. It means JavaScript
+                runs at the client-side, inside the web-browsers. help of javaScript
+                Engine. So most important thing to remember is that the clients
+                web-browser also needs to support the JavaScript. Now most of the
+                web browsers support JavaScript and have there JavaScript engines.
+              </p>
+              <h4>Example:</h4>
+              <ol>
+                <li>Google Chrome has its own JavaScript engine called V8.</li>
+                <li>Firefox Spidermonkey.</li>
+                <li>Safari JavaScript Core</li>
+              </ol>
+              <p>
+                Also JavaScript is single-threaded language it means JavaScript run
+                only one operation at a time. But there has event loop which
+                maintain long task.
+              </p>
+              <p>
+                Conclusion: JavaScript work help of javaScript Engine (V8,
+                Spidermonkey) Line by line synchronously.
+              </p>
+            </div>
+            <div class="accordion">
+              <p>what is javaScript event loop?</p>
+            </div>
+            <div class="discreaption">
+              <p>
+                Javascript is single-threaded, it executes only one operation at a
+                time. This process of executing we say javascript is synchronous and
+                run only one operation at a time. But what happens when run long
+                task to complete? This situation JavaScript complete long task help
+                of event loop. behind the seans which mechanisms complete there long
+                task called event loop. Now we discous this mechanisms (event loop).
+              </p>
+              <h4>JavaScript Engine</h4>
+              <p>
+                Each browser has a Javascript runtime environment. the javascript
+                runtime consists of Javascript Engine. this engine have a memory
+                heap and a call stack.
+              </p>
+              <h4>Heap</h4>
+              <p>
+                Memory heap is allocated every objects, functions or variables and
+                stored in the heap.(means top).
+              </p>
+              <h4>Call stack</h4>
+              <p>
+                The call stack read your javascript code and executed line by
+                line.The call stack follows the First In Last principle, the
+                function that is first added is executed last.
+              </p>
+            </div>
+            <div class="accordion">
+              <p>What is Difference between local storage & session storage?</p>
+            </div>
+            <div class="discreaption">
+              <p>
+                SessionStorage and LocalStorage used for storing the data on the
+                client side. But there have some differences between local storage
+                and session storage are given bellow:
+              </p>
+              <table>
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Local storage</th>
+                    <th>Session storage</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>01</td>
+                    <td>
+                      The local Storage stores data parmanently, it has no expiry
+                      date.
+                    </td>
+                    <td>
+                      The session storage Stores data only for the duration of the
+                      session, when the user closes their browser the data is lost.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>02</td>
+                    <td>
+                      The local storage data Cleared only via JavaScript code or
+                      clearing browser cache.
+                    </td>
+                    <td>
+                      The session storage data Cleared when browser closed.and there
+                      data uniq each browser tab.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>03</td>
+                    <td>
+                      The local storage data limit 5MB per app per browser.
+                      According to the HTML5 spec, this limit can be increased by
+                      the user when needed.
+                    </td>
+                    <td>
+                      The session storage data Limit 5MB, Limited only by system
+                      memory.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <!-- Card Payment UI -->
           <div id="card-payment">
             <div class="row">
               <div class="col-12 col-md-8 p-3 mx-auto shadow-lg rounded">
@@ -1303,5 +1421,6 @@
     <script src="js/length.js"></script>
     <script src="js/discountCalculator.js"></script>
     <script src="js/interestCalculator.js"></script>
+    <script src="js/accordion.js"></script>
   </body>
 </html>
