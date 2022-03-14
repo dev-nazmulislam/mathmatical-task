@@ -231,7 +231,6 @@
                     id="i-reset-btn"
                     type="reset"
                     value="Reset"
-                    onClick="window.location.reload()"
                     class="btn btn-info d-block my-3 w-100"
                   />
                 </form>
@@ -287,7 +286,7 @@
                           type="text"
                           class="form-control"
                           id="weight"
-                          placeholder="Pound"
+                          placeholder="Kg"
                         />
                       </div>
                     </div>
@@ -317,8 +316,8 @@
                     <div class="col-12 col-md-4 bg-light">
                       <h4 class="text-center p-3">Your BMI:</h4>
                     </div>
-                    <div class="col-12 col-md-8 bg-success">
-                      <h4 class="text-center text-light p-3">23.6</h4>
+                    <div id="add-bg" class="col-12 col-md-8 bg-success">
+                      <h4 id="bmi" class="text-center text-light p-3">00</h4>
                     </div>
                   </div>
                   <button
@@ -332,7 +331,6 @@
                     id="bmi-reset-btn"
                     type="reset"
                     value="Reset"
-                    onClick="window.location.reload()"
                     class="btn btn-info d-block my-3 w-100 fw-bold"
                   />
                   <hr />
@@ -347,7 +345,7 @@
                         Normal weight 18.5 - 25
                       </p>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-3 bg-warning">
+                    <div class="col-12 col-md-6 col-lg-3 bg-info">
                       <p class="text-center text-light fw-bold py-2">
                         Over weight 25 - 30
                       </p>
@@ -1422,5 +1420,6 @@
     <script src="js/discountCalculator.js"></script>
     <script src="js/interestCalculator.js"></script>
     <script src="js/accordion.js"></script>
+    <script src="js/bmi-calc.js"></script>
   </body>
 </html>
